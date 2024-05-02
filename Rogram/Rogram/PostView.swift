@@ -6,14 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct PostView: View {
     let imageUrl: URL
     let title: String
     
     var body: some View {
-        VStack(alignment: .center) {
-            AsyncImage(url: imageUrl)
+        VStack(alignment: .center, spacing: 8.0) {
+            KFImage(imageUrl)
+                .placeholder {
+                    Image("placeholder", bundle: nil)
+                        .resizable()
+                        .frame(width: 320, height: 320)
+                }
+            
             Text(title)
         }
     }

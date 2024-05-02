@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		470A242F2BE45AF100188FE8 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 470A242E2BE45AF100188FE8 /* Kingfisher */; };
 		47968BC42BE3243F009A5B95 /* RogramApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47968BC32BE3243F009A5B95 /* RogramApp.swift */; };
 		47968BC62BE3243F009A5B95 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47968BC52BE3243F009A5B95 /* ContentView.swift */; };
 		47968BC82BE3243F009A5B95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47968BC72BE3243F009A5B95 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				470A242F2BE45AF100188FE8 /* Kingfisher in Frameworks */,
 				47968BD32BE324CD009A5B95 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +101,7 @@
 			name = Rogram;
 			packageProductDependencies = (
 				47968BD22BE324CD009A5B95 /* ComposableArchitecture */,
+				470A242E2BE45AF100188FE8 /* Kingfisher */,
 			);
 			productName = Rogram;
 			productReference = 47968BC02BE3243F009A5B95 /* Rogram.app */;
@@ -130,6 +133,7 @@
 			mainGroup = 47968BB72BE3243F009A5B95;
 			packageReferences = (
 				47968BD12BE324CD009A5B95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+				470A242D2BE45AF100188FE8 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 47968BC12BE3243F009A5B95 /* Products */;
 			projectDirPath = "";
@@ -370,6 +374,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		470A242D2BE45AF100188FE8 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		47968BD12BE324CD009A5B95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
@@ -381,6 +393,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		470A242E2BE45AF100188FE8 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 470A242D2BE45AF100188FE8 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
 		47968BD22BE324CD009A5B95 /* ComposableArchitecture */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 47968BD12BE324CD009A5B95 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;

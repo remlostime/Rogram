@@ -15,7 +15,10 @@ struct ContentView: View {
         NavigationStack {
             List(store.posts) { post in
                 NavigationLink(value: post) {
+                    Spacer()
                     PostView(imageUrl: post.thumbnailUrl, title: post.title)
+                        .frame(width: 320)
+                    Spacer()
                 }
             }
             .navigationDestination(for: Post.self) { post in

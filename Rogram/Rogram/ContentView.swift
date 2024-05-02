@@ -12,11 +12,16 @@ struct ContentView: View {
     let store: StoreOf<MainScreenFeature>
     
     var body: some View {
-        List(store.posts) { post in
-            PostView(imageUrl: post.thumbnailUrl, title: post.title)
-                .onTapGesture {
-                    store.send(.tapPost(post))
+        NavigationStack {
+            List(store.posts) { post in
+                NavigationLink(value: post) {
+                    PostView(imageUrl: post.thumbnailUrl, title: post.title)
                 }
+            }
+            .navigationDestination(for: Post.self) { post in
+                PostView(imageUrl: post.url, title: post.title)
+            }
+            .listStyle(.plain)
         }
         .onAppear {
             store.send(.initialLoad)

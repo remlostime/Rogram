@@ -19,7 +19,7 @@ import Foundation
 
 typealias PostId = Int
 
-struct Post: Decodable, Equatable, Identifiable {
+struct Post: Decodable, Equatable, Identifiable, Hashable {
     let id: PostId
     let title: String
     let url: URL

@@ -18,7 +18,6 @@ struct MainScreenFeature {
     enum Action {
         case initialLoad
         case receivedFeedResponse(PostResponse)
-        case tapPost(Post)
     }
     
     @Dependency(\.postNetworkClient) var postNetworkClient
@@ -39,9 +38,6 @@ struct MainScreenFeature {
                     // todo: maybe add the error as param in `state`?
                     print(error)
                 }
-                return .none
-            case .tapPost(let post):
-                // todo: add navigation dst
                 return .none
             }
         }
